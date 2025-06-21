@@ -1,0 +1,11 @@
+CREATE TABLE  usuario (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
+);
+
+-- Insert sample user
+INSERT INTO usuario (username, password, email) VALUES 
+('admin', 'admin123', 'admin@example.com'),
+('user1', 'password123', 'user1@example.com'); 
