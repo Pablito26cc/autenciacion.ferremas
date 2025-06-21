@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferremas - Bienvenido</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>Ferremas</h1>
+            </div>
+            <div class="user-info">
+                <span id="userName">Usuario</span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Cerrar Sesión
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <div class="welcome-text">
+                <h2>¡Bienvenido a Ferremas!</h2>
+                <p class="welcome-message">Ferretería y Construcción - Tu aliado en proyectos</p>
+                <p class="user-greeting">Hola <span id="userGreeting">Usuario</span>, ¿qué necesitas hoy?</p>
+            </div>
+            <div class="welcome-image">
+                <i class="fas fa-hard-hat"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <h3>Categorías de Productos</h3>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterByCategory('herramientas')">
+                    <i class="fas fa-wrench"></i>
+                    <h4>Herramientas</h4>
+                    <p>Manuales y eléctricas</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('construccion')">
+                    <i class="fas fa-hammer"></i>
+                    <h4>Construcción</h4>
+                    <p>Materiales básicos</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('electricidad')">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Electricidad</h4>
+                    <p>Cables y accesorios</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('plomeria')">
+                    <i class="fas fa-faucet"></i>
+                    <h4>Plomería</h4>
+                    <p>Tuberías y conexiones</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('pintura')">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>Pintura</h4>
+                    <p>Pinturas y accesorios</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('jardin')">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Jardín</h4>
+                    <p>Herramientas de jardín</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-header">
+                <h3>Catálogo de Productos</h3>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar productos...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-section">
+        <div class="container">
+            <h3>Productos Destacados</h3>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="featured-content">
+                        <h4>Taladro Eléctrico Profesional</h4>
+                        <p>Potencia y durabilidad para trabajos exigentes</p>
+                        <div class="price">$89.990</div>
+                        <button class="btn-buy">Ver Detalles</button>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div class="featured-content">
+                        <h4>Set de Herramientas Básicas</h4>
+                        <p>Todo lo necesario para el hogar</p>
+                        <div class="price">$45.990</div>
+                        <button class="btn-buy">Ver Detalles</button>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="featured-content">
+                        <h4>Cable Eléctrico 2.5mm</h4>
+                        <p>Calidad premium para instalaciones</p>
+                        <div class="price">$12.990</div>
+                        <button class="btn-buy">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ferremas</h4>
+                    <p>Tu ferretería de confianza</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +56 9 1234 5678</p>
+                    <p><i class="fas fa-envelope"></i> info@ferremas.cl</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <p>Lunes - Viernes: 8:00 - 20:00</p>
+                    <p>Sábado: 9:00 - 18:00</p>
+                    <p>Domingo: 10:00 - 16:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ferremas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 
