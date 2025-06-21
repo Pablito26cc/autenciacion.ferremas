@@ -417,11 +417,13 @@ function showNotification(message, type = 'info') {
 }
 
 // Cerrar sesión
+// ...existing code...
 function logout() {
     localStorage.removeItem('authToken');
     localStorage.removeItem('userData');
-    window.location.href = '/';
+    window.location.href = '/logout.html'; // Redirige a la página de logout
 }
+// ...existing code...
 
 // Animación para notificaciones
 const style = document.createElement('style');
